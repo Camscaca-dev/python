@@ -1,0 +1,156 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOjFNjnfENQj3Z+s4xSE0RK",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Camscaca-dev/3-TRI-WEB-DESIGN-IA23/blob/main/ExerciciosRepeticao\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "EXERCICIO 1"
+      ],
+      "metadata": {
+        "id": "FV9ZdgLkaokm"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "Y_VsgQguWPUG"
+      },
+      "outputs": [],
+      "source": [
+        "homens18 = 0\n",
+        "mulheres = 0\n",
+        "\n",
+        "while True:\n",
+        "    idade = int(input(\"Idade: \"))\n",
+        "\n",
+        "    if idade < 0:\n",
+        "        break\n",
+        "\n",
+        "    sexo = input(\"Sexo (M/F): \")\n",
+        "\n",
+        "    if sexo == \"M\" and idade > 18:\n",
+        "        homens18 += 1\n",
+        "\n",
+        "    if sexo == \"F\":\n",
+        "        mulheres += 1\n",
+        "\n",
+        "print(\"Homens acima de 18:\", homens18)\n",
+        "print(\"Mulheres:\", mulheres)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "EXERCICIO 2\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "kyN7jhGmaoxT"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "senha_correta = 123456\n",
+        "tentativas = 0\n",
+        "\n",
+        "while tentativas < 3:\n",
+        "    senha = int(input(\"Digite a senha: \"))\n",
+        "\n",
+        "    if senha == senha_correta:\n",
+        "        nome = input(\"Digite seu nome: \")\n",
+        "        print(\"Olá,\", nome + \". Seja bem-vindo ao nosso banco!\")\n",
+        "        break\n",
+        "\n",
+        "    tentativas += 1\n",
+        "\n",
+        "    if tentativas == 1:\n",
+        "        print(\"Senha incorreta! Você ainda tem 2 tentativas.\")\n",
+        "    elif tentativas == 2:\n",
+        "        print(\"Senha incorreta! Você ainda tem 1 tentativa.\")\n",
+        "    else:\n",
+        "        print(\"Sua senha foi bloqueada! Vá até um caixa.\")"
+      ],
+      "metadata": {
+        "id": "knnLKaVpX1RP"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "EXERCICIO 3"
+      ],
+      "metadata": {
+        "id": "cpVhVnGOao8x"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "melhor_tempo = 999\n",
+        "pior_tempo = 0\n",
+        "melhor_nome = \"\"\n",
+        "pior_nome = \"\"\n",
+        "soma = 0\n",
+        "contador = 0\n",
+        "\n",
+        "for i in range(7):\n",
+        "    nome = input(\"Nome: \")\n",
+        "    tempo = float(input(\"Tempo: \"))\n",
+        "\n",
+        "    soma += tempo\n",
+        "\n",
+        "    if tempo < melhor_tempo:\n",
+        "        melhor_tempo = tempo\n",
+        "        melhor_nome = nome\n",
+        "\n",
+        "    if tempo > pior_tempo:\n",
+        "        pior_tempo = tempo\n",
+        "        pior_nome = nome\n",
+        "\n",
+        "    if 12 <= tempo <= 15:\n",
+        "        contador += 1\n",
+        "\n",
+        "media = soma / 7\n",
+        "\n",
+        "print(\"Melhor:\", melhor_nome)\n",
+        "print(\"Pior:\", pior_nome)\n",
+        "print(\"Média:\", media)\n",
+        "print(\"Entre 12 e 15s:\", contador)"
+      ],
+      "metadata": {
+        "id": "Jhfc_SfbayfP"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
