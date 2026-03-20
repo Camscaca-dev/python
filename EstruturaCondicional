@@ -1,0 +1,119 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyP+gICXLa+D5eSzODKhli0V",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Camscaca-dev/python/blob/main/EstruturaCondicional\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "3UJEz3cgZd68"
+      },
+      "outputs": [],
+      "source": [
+        "\"\"\" ex1 lista Estrutura condicional \"\"\"\n",
+        "\n",
+        "opcao = int(input(\"Qual grandeza deseja calcular? \"))\n",
+        "\n",
+        "if opcao == 1:\n",
+        "    resistencia = float(input(\"Informe a Resistência (Ohm): \"))\n",
+        "    corrente = float(input(\"Informe a Corrente (Ampére): \"))\n",
+        "    tensao = resistencia * corrente\n",
+        "    print(\"Tensão =\", tensao, \"V\")\n",
+        "\n",
+        "elif opcao == 2:\n",
+        "    tensao = float(input(\"Informe a Tensão (Volt): \"))\n",
+        "    corrente = float(input(\"Informe a Corrente (Ampére): \"))\n",
+        "    resistencia = tensao / corrente\n",
+        "    print(\"Resistência =\", resistencia, \"Ohm\")\n",
+        "\n",
+        "elif opcao == 3:\n",
+        "    tensao = float(input(\"Informe a Tensão (Volt): \"))\n",
+        "    resistencia = float(input(\"Informe a Resistência (Ohm): \"))\n",
+        "    corrente = tensao / resistencia\n",
+        "    print(\"Corrente =\", corrente, \"A\")\n",
+        "\n",
+        "else:\n",
+        "    print(\"Opção inválida\")\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\"\"\"ex2\"\"\"\n",
+        "numero = int(input(\"Digite um número inteiro positivo: \"))\n",
+        "\n",
+        "if numero % 2 == 0:\n",
+        "    resultado = numero ** 2\n",
+        "    print(\"Número par! Quadrado =\", resultado)\n",
+        "else:\n",
+        "    resultado = numero ** 3\n",
+        "    print(\"Número ímpar! multiplicado por 3 =\", resultado)"
+      ],
+      "metadata": {
+        "id": "N_czrWawQZca"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\"\"\"ex3\"\"\"\n",
+        "num1 = float(input(\"Digite o primeiro número positivo: \"))\n",
+        "num2 = float(input(\"Digite o segundo número positivo: \"))\n",
+        "\n",
+        "print(\"Escolha uma opção dessas:\")\n",
+        "print(\"A. Média ponderada (pesos 2 e 3)\")\n",
+        "print(\"B. Quadrado da soma dos 2 números\")\n",
+        "print(\"C. Cubo do menor número\")\n",
+        "\n",
+        "opcao = input(\"Opção: \").upper()\n",
+        "\n",
+        "if opcao == \"A\":\n",
+        "    media = (num1 * 2 + num2 * 3) / 5\n",
+        "    print(\"Média ponderada =\", media)\n",
+        "\n",
+        "elif opcao == \"B\":\n",
+        "    resultado = (num1 + num2) ** 2\n",
+        "    print(\"Quadrado da soma =\", resultado)\n",
+        "\n",
+        "elif opcao == \"C\":\n",
+        "    menor = min(num1, num2)\n",
+        "    resultado = menor ** 3\n",
+        "    print(\"Cubo do menor número =\", resultado)\n",
+        "\n",
+        "else:\n",
+        "    print(\"Opção inválida\")"
+      ],
+      "metadata": {
+        "id": "PxZ5q8QeRwEF"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
